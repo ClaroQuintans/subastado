@@ -1,0 +1,98 @@
+.navbar{
+    background-color: $azul;
+    padding: 1rem !important;
+
+    .hamburger{
+        display: inline-block !important;
+        cursor: pointer;
+
+        .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #FFF;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        &.change{
+
+            .bar1 {
+                -webkit-transform: rotate(-45deg) translate(-8px, 7px);
+                transform: rotate(-45deg) translate(-8px, 7px);
+            }
+
+            .bar2 { 
+                opacity: 0;
+            }
+
+            .bar3 {
+                -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                transform: rotate(45deg) translate(-8px, -8px);
+            }
+        }
+    }
+
+    .last-update{
+        margin-left: 50px;
+        color: #FFF;
+    }
+
+    .navbar-brand{
+        position: absolute !important;
+        left: 50%;
+        transform: translate(-50%,0);
+
+    	img{
+    		max-width: 160px;
+    	}    	
+    }
+
+    &.navbar-light .navbar-nav .nav-link,
+    &.navbar-light .navbar-nav .show > .nav-link, 
+    &.navbar-light .navbar-nav .active > .nav-link, 
+    &.navbar-light .navbar-nav .nav-link.show, 
+    &.navbar-light .navbar-nav .nav-link.active{
+    	color: #FFF;
+
+    	&:hover{
+    		color: #FFF;
+    	}
+    }
+
+    ul.navbar-nav{
+
+        .top-buttons{
+            margin-right: 50px;
+
+            .btn-acebron-2{
+                margin-right: 10px;
+            }
+        }
+
+        .nav-item{
+            .nav-link{
+                position: relative;
+                padding-left: 25px;
+                color: #FFF !important;
+
+                &:before{
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background-image: url(/img/user-icon.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    display: block;
+                    position: absolute;                    
+                    left: 0;
+                }
+            }
+
+            .dropdown-menu{
+                top: 95%;
+                transition: 0.4s;
+            }
+        }
+    }    
+}

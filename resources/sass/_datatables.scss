@@ -1,0 +1,121 @@
+.dataTables_wrapper{
+
+    .dataTables_processing{}
+
+    table{
+        margin: 20px 0;
+
+        thead{
+            td{
+                font-weight: 600;
+                border-top: unset;
+                vertical-align: middle;
+                line-height: 1.2;
+            }
+        }
+
+        tbody{
+            td{
+                vertical-align: middle;
+
+                &.acciones{
+                    min-width: 120px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+        tfoot{
+            td{
+                font-weight: 600;
+            }
+        }
+
+        .progress{
+            height: 30px;
+        }
+
+        .progress-bar-success {
+            background-color: #5cb85c;
+            color: #FFF;
+        }
+
+        .progress-bar.active{
+            -webkit-animation: progress-bar-stripes 2s linear infinite;
+            -o-animation: progress-bar-stripes 2s linear infinite;
+            animation: progress-bar-stripes 2s linear infinite;
+            -webkit-animation-direction: reverse;
+            -moz-animation-direction: reverse;
+            -ms-animation-direction: reverse;
+            -o-animation-direction: reverse;
+            animation-direction: reverse;
+        }
+
+        a.actions{
+            &.ocupacion, &.disponibilidad{
+                text-transform: uppercase;
+                font-weight: 600;
+                text-decoration: none;
+            }
+        }
+
+        button.actions{
+            background-color: transparent;
+            border: none;
+            text-transform: capitalize;
+            padding: 5px 5px 5px 20px;
+            margin-right: 10px;
+            position: relative;
+            border-radius: 5px;
+            font-size: 12px;
+            transition: all 0.4s ease;
+
+            &:last-child{
+                margin-right: 0;
+            }
+
+            &.view{
+                &:before{
+                    position: absolute;
+                    content: '\21B3';
+                    left: 3px;
+                }
+            }
+
+            &.edit{
+                &:before{
+                    position: absolute;
+                    content: '\270E';
+                    left: 3px;
+                }
+            }
+
+            &.delete{
+                &:before{
+                    position: absolute;
+                    content: '\2716';
+                    left: 4px;
+                }
+            }
+
+            &:hover{
+                background-color: $azul;
+                color: #FFF;
+            }
+        }
+    }
+
+    .dataTables_paginate{
+        .paginate_button{
+            &.current{}
+            &:hover:not(.current){}
+        }
+    }
+}
+
+.button-under-table{
+    max-width: 350px;
+    padding: 20px 0;
+}

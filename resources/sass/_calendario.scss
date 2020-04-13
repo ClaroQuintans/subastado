@@ -1,0 +1,60 @@
+.container-calendario{
+
+    .row-1{
+        .title-section{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;            
+            padding: 15px;
+
+            .first{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .titulo{
+                    margin-right: 30px;
+                }
+            }
+
+            .group-buttons{
+                a{
+                    font-size: 20px;
+                    transition: all 0.4s ease;
+                }
+            }
+
+            span.no-update{
+                font-size: 14px;
+                font-weight: 200;
+            }
+        }
+    }
+}
+
+#calendario{
+    > div{
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap;
+
+        .ui-datepicker-group{
+            flex: 1 0 20%;
+            margin: 5px;
+
+            .ui-datepicker-calendar{
+
+                tbody tr td{
+                    &.esFestivo, &.esDiaCalendario{
+                        pointer-events: all;
+                        a{
+                            background-color: $red_warning;
+                            color: #FFF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
